@@ -7,8 +7,8 @@ def submit_add_project(app_add_project, name, desc, start_dt, task):
     print(name, desc, start_dt, task)
 
 
-def submit_edit_project(app_add_project, name, desc, start_dt, task):
-    app_add_project.destroy()
+def submit_edit_project(app_edit_project, name, desc, start_dt, task):
+    app_edit_project.destroy()
     print("Project Edited")
     print(name, desc, start_dt, task)
 
@@ -41,7 +41,7 @@ def add_project_window():
     add_button = Button(app_add_project, text='Add',
                         command=lambda: submit_add_project(app_add_project, project_name.get(), project_description.get(), project_start_dt.get(), project_task.get()))
     cancel_button = Button(app_add_project, text='Cancel',
-                           command=lambda: cancel_button_project(app_add_project))
+                        command=lambda: cancel_button_project(app_add_project))
 
     add_button.grid(row=4, column=1)
     cancel_button.grid(row=4, column=2)

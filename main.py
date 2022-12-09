@@ -1,6 +1,6 @@
 from tkinter import *
-from project_menu import add_project_window, edit_project_window, delete_project_window
-
+from menu.project_menu import add_project_window, edit_project_window, delete_project_window
+from menu.task_menu import add_task_window
 def close_main(app):
     app.destroy()
 
@@ -85,7 +85,7 @@ def manager_menu(app):
     )
 
     # add menu items to the File menu
-    task_menu.add_command(label='Add Task')
+    task_menu.add_command(label='Add Task', command=add_task_window)
     task_menu.add_command(label='Edit Task')
     task_menu.add_command(label='Delete Task')
 
