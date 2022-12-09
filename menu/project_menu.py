@@ -1,8 +1,11 @@
 from tkinter import *
+from model.project_model import Project
 
+project_list = Project()
 
 def submit_add_project(app_add_project, name, desc, start_dt, task):
     app_add_project.destroy()
+    project_list.addProject(name, desc, start_dt, task)
     print("Project Added")
     print(name, desc, start_dt, task)
 
@@ -122,3 +125,6 @@ def delete_project_window():
 
     app_edit_project.geometry("500x300")
     app_edit_project.mainloop()
+
+def display_project_window():
+    print("Show project", project_list.getProjectName())

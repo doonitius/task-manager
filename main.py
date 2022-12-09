@@ -1,5 +1,5 @@
 from tkinter import *
-from menu.project_menu import add_project_window, edit_project_window, delete_project_window
+from menu.project_menu import add_project_window, edit_project_window, delete_project_window, display_project_window
 from menu.task_menu import add_task_window
 def close_main(app):
     app.destroy()
@@ -33,6 +33,7 @@ def director_menu(app):
     project_menu.add_command(label='Add Project', command=add_project_window)
     project_menu.add_command(label='Edit Project', command=edit_project_window)
     project_menu.add_command(label='Delete Project', command=delete_project_window)
+    project_menu.add_command(label='Display Project', command=display_project_window)
 
     menubar.add_cascade(
         label="Project",
