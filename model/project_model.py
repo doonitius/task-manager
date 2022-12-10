@@ -1,17 +1,21 @@
 class Project:
-    def __init__(self):
-        self.name = ''
-        self.desc = ''
-        self.start_dt = ''
-        self.task = ''
-        print("intit")
-
-    def addProject(self, name, desc, start_dt, task):
-        self.name = name
-        self.desc = desc
-        self.start_dt = start_dt
-        self.task = task
+    def __init__(self, name, desc, start_dt, task):
+        self.__name = name
+        self.__desc = desc
+        self.__start_dt = start_dt
+        self.__task = task
 
     def getProjectName(self):
-        print("project: ", self.name)
-        return self.name
+        return self.__name
+
+    def getProjectDesc(self):
+        return self.__desc
+
+    def getProjectStartDt(self):
+        return self.__start_dt
+
+    def getProjectTask(self):
+        return self.__task
+
+    def setProjectName(self, name):
+        self.__name = name
